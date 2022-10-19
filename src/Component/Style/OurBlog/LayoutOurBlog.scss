@@ -1,0 +1,89 @@
+@import "../../../variable";
+*{
+    @include resetCss;
+}
+.blog {
+    margin-top: 101px;
+    width: 100%;
+
+    h1 {
+        text-align: center;
+    }
+
+    &-slide {
+        margin: 0 10% 0 10%;
+        @include flex(flex, column, '', flex-end);
+        
+
+        .arrow {
+            display: flex;
+            text-align: left;
+            margin-bottom: 31px;
+
+            .img1 {
+                margin-left: 17px;
+                width: 30px;
+                height: 30px;
+                background-color: #ffe6ea;
+                @include flex(flex, row, center, center);
+                border-radius: 6px;
+                box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.07);
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: #fcc0ca;
+                }
+            }
+
+
+            .img2 {
+                @extend .img1;
+                background-color: $red-color;
+                box-shadow: 0px 4px 6px rgba(231, 29, 54, 0.2);
+
+                &:hover {
+                    background-color: #fc5266 !important;
+                }
+            }
+
+        }
+
+        .slick-slider {
+            width: 100%;
+
+            .slick-list {
+
+                .slick-track {
+
+                    .slick-slide {
+                        width: 50%;
+
+
+                        div {
+                            width: 98%;
+
+
+                            .slide-item {
+                                border-radius: 23px;
+                                margin-bottom: 37px;
+                                display: flex !important;
+                                align-items: center;
+                                border: 1px solid black;
+                                padding: 10px;
+                                @include item-blog(#F8FFFE, $blue-color);
+
+                                img {
+                                    margin: 3% 5% 3% 2%;
+                                }
+                                &:hover{
+                                    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.193);
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

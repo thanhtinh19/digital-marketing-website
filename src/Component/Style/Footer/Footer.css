@@ -1,0 +1,112 @@
+.footer {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 10%;
+  padding-right: 10%;
+  background-image: url("../../../img/image/bgFooter.png");
+}
+.footer-content {
+  margin-top: 25px;
+  padding-bottom: 86px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-content .content-icon {
+  width: 30%;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 36px;
+  letter-spacing: 0.02em;
+  color: #011627;
+}
+.footer-content .content-icon .icon {
+  margin-top: 39px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-content .content-icon .icon svg {
+  width: 44px;
+  height: 44px;
+  color: #2EC4B6;
+}
+.footer-content .content-icon .icon svg:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.footer-content .company h3 {
+  margin-bottom: 39px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.02em;
+  color: #2EC4B6;
+}
+.footer-content .company p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: #263238;
+}
+.footer-content .news {
+  width: 30%;
+}
+.footer-content .news h3 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.02em;
+  color: #2EC4B6;
+  text-transform: uppercase;
+  margin-bottom: 39px;
+}
+.footer-content .news .new-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.footer-content .news .new-item img {
+  width: 100px;
+  height: 100px;
+}
+.footer-content .news .new-item-content {
+  margin-left: 20px;
+}
+.footer-content .news .new-item-content h4 {
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0;
+  color: #2EC4B6;
+}
+.footer-content .news .new-item-content p {
+  margin-bottom: 14px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0;
+  color: #011627;
+}
+.footer-content .news .new-item-content li {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 0.055em;
+  color: #E71D36;
+}
+.footer .signature {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 63px;
+}
+.footer .signature p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: #011627;
+}
+.footer .signature span {
+  color: #2EC4B6;
+}/*# sourceMappingURL=Footer.css.map */

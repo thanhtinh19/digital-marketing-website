@@ -1,0 +1,39 @@
+.portfolio {
+  text-align: center;
+}
+.portfolio button {
+  font-family: "Inter", sans-serif;
+  color: #011627;
+}
+.portfolio h1 {
+  margin-bottom: 57px;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 54px;
+  letter-spacing: 0.025em;
+  color: #011627;
+}
+.portfolio .tab-panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 10% 0 10%;
+}
+.portfolio .tab-panel img {
+  width: 32%;
+  margin-top: 31px;
+}
+.portfolio .btn {
+  margin-top: 85px;
+  padding: 12px 25px 12px 25px;
+  border-radius: 10px;
+  background-color: #2EC4B6;
+  color: white;
+  font-size: 15px;
+  margin-right: 0 auto;
+  box-shadow: 0px 4px 12px rgba(46, 196, 182, 0.48);
+}
+.portfolio .btn:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}/*# sourceMappingURL=LayoutOurPortfolio.css.map */

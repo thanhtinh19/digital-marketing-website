@@ -1,0 +1,188 @@
+@import "../../../variable";
+
+* {
+    @include resetCss;
+}
+
+.our-client {
+    @include flex(flex, row, space-evenly, '');
+    width: 100%;
+    margin-bottom: 75px;
+
+    padding: {
+        left: 10%;
+        right: 10%
+    }
+    @media only screen and (max-width:700px){
+        flex-direction: column;
+        &-text{
+            text-align: center;
+            width: 100% !important;
+            padding-bottom: 50px;
+        }
+    }
+
+    &-text {
+        width: 30%;
+
+
+        h3 {
+            margin-bottom: 30px;
+            @include titleLayout(500, 25px, 30px, 0, $red-color);
+        }
+
+        h1 {
+            @include titleLayout(700, 40px, 50px, 0, $color-text);
+            margin-bottom: 26px;
+        }
+
+        p {
+            @include titleLayout(400, 15px, 35px, 0.02em, $color-text)
+        }
+    }
+
+    &-slide {
+
+        @include flex(flex, column, '', flex-end);
+
+
+        .arrow {
+            display: flex;
+            margin-bottom: 31px;
+            @media only screen and (max-width:700px){
+                margin-bottom: 0;
+            }
+
+            .img1 {
+                margin-left: 17px;
+                width: 30px;
+                height: 30px;
+                background-color: #ffe6ea;
+                @include flex(flex, row, center, center);
+                border-radius: 6px;
+                box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.07);
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: #fcc0ca;
+                }
+            }
+
+
+            .img2 {
+                @extend .img1;
+                background-color: $red-color;
+                box-shadow: 0px 4px 6px rgba(231, 29, 54, 0.2);
+
+                &:hover {
+                    background-color: #fc5266 !important;
+                }
+            }
+
+        }
+
+        .slick-slider {
+            width: 753px;
+
+            @media only screen and (max-width:1024px) {
+                width: 500px;
+            }
+
+            @media only screen and (max-width:700px) {
+                width: 550px;
+                margin-top: 50px;
+            }
+            @media only screen and (max-width:500px) {
+                width: 350px;
+                margin-top: 50px;
+            }
+
+            .slick-list {
+                .slick-track {
+                    .slick-slide {
+
+                        div {
+                            width: 173px;
+
+                            @media only screen and (max-width:1024px) {
+                                width: 150px;
+                            }
+
+                            @media only screen and (max-width:700px) {
+                                width: 200px;
+                                .slide-item{
+                                    img{
+                                        border-radius: 20px;
+                                        width: 200px;
+                                    }
+                                    .bg-gradient {
+                                            padding-bottom: 10px !important;
+                                            font-size: 5px;
+                                          width: 200px;
+                                    }
+                                }
+                            }
+                            @media only screen and (max-width:500px) {
+                                width: 250px;
+                                .slide-item{
+                                    img{
+                                        border-radius: 20px;
+                                        width: 250px;
+                                    }
+                                    .bg-gradient {
+                                            padding-bottom: 10px !important;
+                                            font-size: 5px;
+                                          width: 250px;
+                                    }
+                                }
+                            }
+
+                            .slide-item {
+                                display: flex !important;
+                                @include flex(flex, row, '', flex-end);
+                                margin-left: 5%;
+
+                                img {
+                                    position: relative;
+                                }
+
+                                .bg-gradient {
+                                    position: absolute;
+                                    bottom: 0;
+                                    @include flex(flex, row, space-around, flex-end);
+                                    padding-bottom: 20px;
+                                    height: 50%;
+                                    border-radius: 20px;
+                                    background-image: linear-gradient(180deg, rgba(1, 22, 39, 0) 40.63%, #011627 100%) !important;
+
+                                    p {
+                                        @include titleLayout(400, 12px, 15px, 0, #FFFFFF)
+                                    }
+
+                                    .star {
+                                        @include flex(flex, row, space-evenly, center);
+                                        width: 37px;
+                                        height: 15px;
+                                        background-color: $red-color;
+                                        border-radius: 127px;
+
+                                        img {
+                                            width: 7px;
+                                            height: 7px;
+                                        }
+
+                                        p {
+                                            @include titleLayout(600, 8px, 10px, 0, white)
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+}

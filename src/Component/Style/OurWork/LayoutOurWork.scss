@@ -1,0 +1,185 @@
+@import "../../../variable";
+
+* {
+    @include resetCss;
+}
+
+section {
+    text-align: center;
+    padding-right: 10%;
+    padding-left: 10%;
+
+    margin: {
+        top: 60px;
+    }
+
+    h1 {
+        @include titleLayout(700, 45px, 54px, 0.02em, $color-text);
+        margin-bottom: 24px;
+    }
+
+    .logo-work {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: white;
+        align-items: center;
+        padding: 0px 20px 0px 67px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.11);
+        
+
+        img {
+            width: 162px;
+            padding-right: 40px;
+            padding-top: 14px;
+            padding-bottom: 14px;
+            &:hover {
+                    cursor: pointer;
+                }
+        }
+        
+    }
+
+    .content {
+        display: flex;
+        margin-top: 94px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        @media only screen and (max-width:1024px) {
+            flex-direction: column-reverse;
+
+            .content-icon {
+                width: 100%;
+
+                .icon {
+                    justify-content: center;
+                }
+            }
+
+            .content-text {
+                width: 100%;
+                margin-right: 0;
+                padding-bottom: 50px;
+                padding-left: 3%;
+
+                h3 {
+                    font-size: 25px;
+                    font-weight: 600;
+                }
+
+                p {
+                    font-size: 18px;
+                }
+            }
+        }
+
+
+        &-text {
+            width: 50%;
+            text-align: left;
+            margin-right: 5%;
+
+            h3 {
+                margin-bottom: 38px;
+                @include titleLayout(500, 30px, 36px, 0.02em, $color-text);
+            }
+
+            p {
+                @include titleLayout(400, 15px, 30px, 0.02em, $color-text);
+            }
+
+            &-list {
+                margin: {
+                    top: 47px;
+                    bottom: 52px;
+                }
+
+                &-item {
+                    display: flex;
+                    justify-content: left;
+                    align-items: center;
+                    text-align: left;
+                    margin-bottom: 19px;
+
+                    img {
+                        width: 14px;
+                        height: 14px;
+                        margin: 0;
+                    }
+
+                    p {
+                        margin-left: 10px;
+                    }
+                }
+            }
+
+            &-count {
+                display: flex;
+
+                &-audience {
+                    margin-right: 66px;
+
+                    h3 {
+                        @include titleLayout(500, 30px, 36px, 0, #FF1D03);
+                        margin-bottom: 10px;
+                    }
+                }
+
+                &-project {
+                    h3 {
+                        margin-bottom: 10px;
+                        @include titleLayout(500, 30px, 36px, 0, $blue-color);
+                    }
+                }
+            }
+
+            button {
+                @include button(10px, $blue-color, 0, 15px);
+                display: flex;
+                justify-content: left;
+                box-shadow: 0px 4px 12px rgba(46, 196, 182, 0.48);
+                margin-top: 38px;
+            }
+        }
+
+        &-icon {
+            width: 50%;
+            display: flex;
+
+            @media only screen and (max-width:500px) {
+                flex-direction: column;
+                &-it2{
+                    padding-top: 0 !important;
+                }
+            }
+
+            &-it1 {
+                .item1 {
+                    @include itemPackages(#E71D3699, #FFECEA, #FF1D03, to bottom);
+                }
+
+                .item2 {
+                    @include itemPackages(#2EC4B699, #D2FFFB, $blue-color, to bottom);
+                    background-color: #F7FFFE;
+                }
+            }
+
+            &-it2 {
+                padding-top: 100px;
+
+                .item1 {
+                    @include itemPackages(#E71D3699, #FFECEA, #FF1D03, to bottom);
+                }
+
+                .item2 {
+                    @include itemPackages(#2EC4B699, #D2FFFB, $blue-color, to bottom);
+                    background-color: #F7FFFE;
+                }
+            }
+
+        }
+    }
+}

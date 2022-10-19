@@ -1,0 +1,191 @@
+$color-text: #011627;
+$red-color: #E71D36;
+$blue-color: #2EC4B6;
+
+@mixin button($br, $bg, $mr, $fs) {
+    padding: 12px 25px 12px 25px;
+    border-radius: $br;
+    background-color: $bg;
+    color: white;
+    font-size: $fs;
+    margin-right: $mr;
+
+    &:hover {
+        opacity: 0.8;
+        cursor: pointer;
+    }
+}
+
+@mixin flex($display, $flex-direction, $justify, $align) {
+    display: $display;
+    flex-direction: $flex-direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin circle($w, $bg, $br) {
+    width: $w;
+    height: $w;
+    background-color: $bg;
+    border-radius: $br;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin resetCss {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+@mixin titleLayout($fw, $fs, $lh, $ls, $color) {
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+    letter-spacing: $ls;
+    color: $color;
+}
+
+@mixin itemPackages($color, $bg, $text-cl, $position) {
+    text-align: left;
+    padding: 26px 20px 36px 20px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    border-radius: 25px;
+    background-color: white;
+
+    position: relative;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+    box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.06);
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        margin: -2px;
+        background-image: linear-gradient($position, $color, white);
+        border-radius: inherit;
+    }
+
+    &:hover {
+        box-shadow: 1px 9px 13px 3px rgba(0, 0, 0, 0.06);
+        cursor: pointer;
+    }
+
+    .icon {
+        width: 100px;
+        height: 100px;
+        background-color: $bg;
+        border-radius: 13px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    h3 {
+        @include titleLayout(500, 26px, 31px, 0, $color-text)
+    }
+
+    p {
+        margin-bottom: 22px;
+        @include titleLayout(400, 15px, 30px, 0.02em, $color-text)
+    }
+
+    a {
+        text-decoration: none;
+        @include titleLayout(400, 15px, 22px, 0, $text-cl)
+    }
+
+}
+
+@mixin item-blog($bg, $color) {
+    position: relative;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+    background-color: $bg;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        margin: -2px;
+        background-image: linear-gradient(to left, $color, white);
+        border-radius: inherit;
+        opacity: 0.5;
+    }
+
+    img {
+        border-bottom: 7px solid $color;
+        border-radius: 12px;
+
+        @media only screen and (max-width:1024px) {
+            width: 60%;
+        }
+    }
+
+    .slide-item-text {
+        text-align: left;
+
+        p {
+            @include titleLayout(400, 12px, 15px, 0, $color-text );
+            margin-bottom: 14px;
+            @media only screen and (max-width:800px) {
+                    font-size: 10px;
+                    margin-bottom: 10px;
+                }
+        }
+
+        h2 {
+            @include titleLayout(500, 26px, 31px, 0, $color-text );
+            margin-bottom: 25px;
+
+            @media only screen and (max-width:1024px) {
+                font-size: 20px;
+            }
+
+            @media only screen and (max-width:800px) {
+                font-size: 15px;
+                margin-bottom: 10px;
+            }
+        }
+
+        .content {
+            @include titleLayout(400, 16px, 22px, 0.02em, $color-text );
+            margin-bottom: 24px;
+
+            @media only screen and (max-width:800px) {
+                font-size: 12px;
+                margin-bottom: 10px;
+            }
+        }
+
+        .btn-readmore {
+            display: flex;
+            align-items: center;
+            color: $color;
+
+            @media only screen and (max-width:1024px) {
+                font-size: 15px;
+            }
+
+            @media only screen and (max-width:800px) {
+                font-size: 12px;
+            }
+
+            &:hover {
+                cursor: pointer;
+                opacity: 0.7;
+            }
+        }
+    }
+}

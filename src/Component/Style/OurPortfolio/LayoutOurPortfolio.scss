@@ -1,0 +1,49 @@
+@import "../../../variable";
+
+* {
+    @include resetCss;
+}
+
+.portfolio {
+    text-align: center;
+
+    button {
+        font-family: 'Inter', sans-serif;
+        color: $color-text;
+    }
+
+    h1 {
+        margin-bottom: 57px;
+        @include titleLayout(700, 45px, 54px, 0.025em, $color-text)
+    }
+
+    .tab-panel {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 0 10% 0 10%;
+
+        img {
+            width: 32%;
+            margin-top: 31px;
+
+            @media only screen and (max-width:700px) {
+                width: 45%;
+            }
+            @media only screen and (max-width:500px) {
+                width: 90%;
+            }
+        }
+    }
+
+    .btn {
+        margin-top: 85px;
+        @include button(10px, $blue-color, 0 auto, 15px);
+        box-shadow: 0px 4px 12px rgba(46, 196, 182, 0.48);
+
+        @media only screen and (max-width:700px) {
+            margin-top: 30px;
+        }
+    }
+
+}
