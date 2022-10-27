@@ -7,6 +7,10 @@
 
 section {
   text-align: center;
+  padding-right: 10%;
+  padding-left: 10%;
+  position: relative;
+  z-index: 10;
   margin-top: 60px;
 }
 section h1 {
@@ -17,10 +21,21 @@ section h1 {
   color: #011627;
   margin-bottom: 24px;
 }
-section img {
-  width: 1137px;
-  height: 110px;
-  margin: 0 auto;
+section .logo-work {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: white;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.11);
+}
+section .logo-work img {
+  width: 162px;
+  padding: 20px 14px;
+}
+section .logo-work img:hover {
+  cursor: pointer;
 }
 section .content {
   display: flex;
@@ -28,8 +43,30 @@ section .content {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding-left: 10%;
-  padding-right: 10%;
+}
+@media only screen and (max-width: 1024px) {
+  section .content {
+    flex-direction: column;
+  }
+  section .content .content-icon {
+    width: 100%;
+  }
+  section .content .content-icon .icon {
+    justify-content: center;
+  }
+  section .content .content-text {
+    width: 100%;
+    margin-right: 0;
+    padding-bottom: 50px;
+    padding-left: 3%;
+  }
+  section .content .content-text h3 {
+    font-size: 25px;
+    font-weight: 600;
+  }
+  section .content .content-text p {
+    font-size: 18px;
+  }
 }
 section .content-text {
   width: 50%;
@@ -112,6 +149,26 @@ section .content-icon {
   width: 50%;
   display: flex;
 }
+@media only screen and (max-width: 500px) {
+  section .content-icon {
+    flex-direction: column;
+  }
+  section .content-icon .item1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center !important;
+  }
+  section .content-icon .item2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center !important;
+  }
+  section .content-icon-it2 {
+    padding-top: 0 !important;
+  }
+}
 section .content-icon-it1 .item1 {
   text-align: left;
   padding: 26px 20px 36px 20px;
@@ -144,6 +201,7 @@ section .content-icon-it1 .item1 .icon {
   border-radius: 13px;
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-bottom: 30px;
 }
 section .content-icon-it1 .item1 .icon img {
@@ -206,6 +264,7 @@ section .content-icon-it1 .item2 .icon {
   border-radius: 13px;
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-bottom: 30px;
 }
 section .content-icon-it1 .item2 .icon img {
@@ -270,6 +329,7 @@ section .content-icon-it2 .item1 .icon {
   border-radius: 13px;
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-bottom: 30px;
 }
 section .content-icon-it2 .item1 .icon img {
@@ -332,6 +392,7 @@ section .content-icon-it2 .item2 .icon {
   border-radius: 13px;
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-bottom: 30px;
 }
 section .content-icon-it2 .item2 .icon img {

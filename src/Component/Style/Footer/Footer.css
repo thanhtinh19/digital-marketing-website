@@ -1,9 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
 .footer {
   width: 100%;
   margin: 0 auto;
   padding-left: 10%;
   padding-right: 10%;
   background-image: url("../../../img/image/bgFooter.png");
+}
+@media only screen and (max-width: 700px) {
+  .footer {
+    padding-top: 30px;
+  }
 }
 .footer-content {
   margin-top: 25px;
@@ -95,10 +107,45 @@
   letter-spacing: 0.055em;
   color: #E71D36;
 }
+@media only screen and (max-width: 700px) {
+  .footer-content {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .footer-content .content-icon {
+    width: 100%;
+  }
+  .footer-content .content-icon .icon {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .footer-content .company {
+    width: 100%;
+  }
+  .footer-content .company h3 {
+    margin-bottom: 20px;
+  }
+  .footer-content .company p {
+    margin-bottom: 10px;
+  }
+  .footer-content .news {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .footer-content .news .items h4 {
+    font-size: 25px;
+  }
+  .footer-content .news .items p {
+    font-size: 15px;
+  }
+  .footer-content .news .items li {
+    font-size: 15px;
+  }
+}
 .footer .signature {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 63px;
+  padding-bottom: 63px;
 }
 .footer .signature p {
   font-weight: 400;
@@ -109,4 +156,15 @@
 }
 .footer .signature span {
   color: #2EC4B6;
+}
+@media only screen and (max-width: 700px) {
+  .footer .signature p {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .footer .signature {
+    flex-direction: column;
+    align-items: center;
+  }
 }/*# sourceMappingURL=Footer.css.map */

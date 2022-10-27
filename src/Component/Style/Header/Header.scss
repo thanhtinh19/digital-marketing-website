@@ -9,7 +9,8 @@
 .header {
     position: relative;
     width: auto;
-    background: linear-gradient(90deg, #FFE6E6 0%, #F5FFFE 26.81%, #FCF3FF 54.58%, #FFF4E6 99.86%);;
+    background: linear-gradient(90deg, #FFE6E6 0%, #F5FFFE 26.81%, #FCF3FF 54.58%, #FFF4E6 99.86%);
+    ;
 
     .mask {
         position: absolute;
@@ -18,7 +19,8 @@
         left: -11%;
         opacity: 0.7;
         z-index: 1;
-        @media only screen and (max-width:1024px){
+
+        @media only screen and (max-width:1024px) {
             visibility: hidden;
         }
     }
@@ -168,15 +170,18 @@
         padding-top: 80px;
         align-items: flex-end;
         margin: 0 auto;
+        justify-content: space-between;
 
         &-text {
             z-index: 10;
+            width: 60%;
 
             h1 {
                 width: 100%;
-                font-size: 60px;
-                line-height: 80px;
+                font-size: 40px;
+                line-height: 50px;
                 margin-bottom: 40px;
+                margin-top: 50px;
                 color: $color-text;
 
                 span {
@@ -244,10 +249,36 @@
                     }
                 }
             }
+
+            @media only screen and (min-width:1200px) {
+                h1 {
+                    font-size: 80px;
+                    line-height: 80px;
+                }
+            }
+
+            @media only screen and (max-width:500px) {
+                h1 {
+                    font-size: 30px !important;
+                    line-height: 40px;
+                    margin-bottom: 20px;
+                }
+                h3{
+                    font-size: 20px;
+                    margin-bottom: 20px;
+                }
+                p{
+                    font-size: 15px;
+                }
+            }
         }
 
         img {
             z-index: 10;
+
+            @media only screen and (max-width: 1200px) {
+                width: 40%;
+            }
         }
 
         @media only screen and (max-width: 1024px) {
@@ -255,26 +286,28 @@
             flex-direction: column-reverse;
             align-items: center;
             justify-content: flex-start;
+
             img {
-                width: 50%;
+                width: 40%;
             }
-            .content-header-text{
+
+            .content-header-text {
                 text-align: center;
-                h1{
+                width: 100%;
+
+                h1 {
                     font-size: 40px;
-                    margin-bottom:0;
                 }
-                h3{
-                    margin-bottom: 0;
+
+                p {
+                    margin-bottom: 30px;
                 }
-                p{
-                    margin-bottom: 10px;
-                }
-                &-btn{
+
+                &-btn {
                     justify-content: center;
                 }
             }
-        
+
 
         }
     }

@@ -13,12 +13,18 @@
         left: 10%;
         right: 10%
     }
-    @media only screen and (max-width:700px){
+
+    @media only screen and (max-width:1024px) {
         flex-direction: column;
-        &-text{
+
+        &-text {
             text-align: center;
             width: 100% !important;
             padding-bottom: 50px;
+        }
+
+        &-slide {
+            width: 100%;
         }
     }
 
@@ -49,7 +55,8 @@
         .arrow {
             display: flex;
             margin-bottom: 31px;
-            @media only screen and (max-width:700px){
+
+            @media only screen and (max-width:700px) {
                 margin-bottom: 0;
             }
 
@@ -85,13 +92,14 @@
             width: 753px;
 
             @media only screen and (max-width:1024px) {
-                width: 500px;
+                width: 700px;
             }
 
             @media only screen and (max-width:700px) {
                 width: 550px;
                 margin-top: 50px;
             }
+
             @media only screen and (max-width:500px) {
                 width: 350px;
                 margin-top: 50px;
@@ -105,34 +113,56 @@
                             width: 173px;
 
                             @media only screen and (max-width:1024px) {
-                                width: 150px;
+                                width: 200px;
+
+                                .slide-item {
+                                        img {
+                                            border-radius: 20px;
+                                            width: 200px;
+                                        }
+                                
+                                        .bg-gradient {
+                                            width: 200px;
+                                            p{
+                                                font-size: 15px !important;
+                                            }
+                                            .star{
+                                                padding: 10px;
+                                            }
+                                        }
+                                    }
                             }
 
                             @media only screen and (max-width:700px) {
-                                width: 200px;
-                                .slide-item{
-                                    img{
-                                        border-radius: 20px;
-                                        width: 200px;
-                                    }
-                                    .bg-gradient {
-                                            padding-bottom: 10px !important;
-                                            font-size: 5px;
-                                          width: 200px;
-                                    }
-                                }
-                            }
-                            @media only screen and (max-width:500px) {
                                 width: 250px;
-                                .slide-item{
-                                    img{
+
+                                .slide-item {
+                                    img {
                                         border-radius: 20px;
                                         width: 250px;
                                     }
+
                                     .bg-gradient {
-                                            padding-bottom: 10px !important;
-                                            font-size: 5px;
-                                          width: 250px;
+                                        padding-bottom: 20px !important;
+                                        font-size: 5px;
+                                        width: 250px;
+                                    }
+                                }
+                            }
+
+                            @media only screen and (max-width:500px) {
+                                width: 300px;
+
+                                .slide-item {
+                                    img {
+                                        border-radius: 20px;
+                                        width: 300px;
+                                    }
+
+                                    .bg-gradient {
+                                        padding-bottom: 10px !important;
+                                        font-size: 5px;
+                                        width: 300px;
                                     }
                                 }
                             }
@@ -149,8 +179,9 @@
                                 .bg-gradient {
                                     position: absolute;
                                     bottom: 0;
-                                    @include flex(flex, row, space-around, flex-end);
-                                    padding-bottom: 20px;
+                                    @include flex(flex, row, space-between, flex-end);
+                                   
+                                    padding: 30px 20px;
                                     height: 50%;
                                     border-radius: 20px;
                                     background-image: linear-gradient(180deg, rgba(1, 22, 39, 0) 40.63%, #011627 100%) !important;
@@ -164,7 +195,7 @@
                                         width: 37px;
                                         height: 15px;
                                         background-color: $red-color;
-                                        border-radius: 127px;
+                                        border-radius: 12px;
 
                                         img {
                                             width: 7px;

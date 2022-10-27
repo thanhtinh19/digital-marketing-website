@@ -7,10 +7,8 @@
 
 .header {
   position: relative;
-  width: 100%;
-  height: 800px;
-  background-image: url("../../../img/image/bgBanner.png");
-  background-repeat: no-repeat;
+  width: auto;
+  background: linear-gradient(90deg, #FFE6E6 0%, #F5FFFE 26.81%, #FCF3FF 54.58%, #FFF4E6 99.86%);
 }
 .header .mask {
   position: absolute;
@@ -20,10 +18,15 @@
   opacity: 0.7;
   z-index: 1;
 }
+@media only screen and (max-width: 1024px) {
+  .header .mask {
+    visibility: hidden;
+  }
+}
 .header .menu {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   position: fixed;
   z-index: 1000;
@@ -31,16 +34,14 @@
 .header .menu img {
   width: 205px;
   height: 73px;
+  margin-right: 20px;
 }
 .header .menu-ul {
-  display: flex;
-  list-style: none;
-  align-items: center;
-  justify-content: left;
-  font-size: 15px;
+  visibility: hidden;
+  transition: 0.25s ease-in-out;
 }
 .header .menu-ul li {
-  margin: 30px;
+  margin: 20px;
   cursor: pointer;
 }
 .header .menu-ul li a {
@@ -51,9 +52,12 @@
   border-bottom: 3px solid #E71D36;
   margin-top: 5px;
 }
-.header .menu-ul li.active {
-  border-bottom: 3px solid #E71D36;
+.header .menu-ul li .active {
+  border-bottom: 2px solid #E71D36;
   transition: 0.3 ease border-bottom;
+}
+.header .menu-ul .nav-close-btn {
+  display: none;
 }
 .header .menu-ul button {
   padding: 12px 25px 12px 25px;
@@ -67,18 +71,108 @@
   opacity: 0.8;
   cursor: pointer;
 }
+.header .menu .nav-btn {
+  visibility: hidden;
+}
+@media only screen and (min-width: 1024px) {
+  .header .menu {
+    padding: 20px 10% 20px 10%;
+  }
+  .header .menu-ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    font-size: 15px;
+    visibility: visible;
+    width: 70%;
+    height: auto;
+    background: none;
+    box-shadow: none;
+    justify-content: space-between;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .header .menu {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .header .menu img {
+    margin: 20px 0px 20px 0px;
+    position: relative;
+    right: 0;
+  }
+  .header .menu-ul {
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+  .header .menu .nav-btn {
+    visibility: visible;
+  }
+}
+.header .menu .menu-responsive {
+  visibility: visible;
+  top: 0;
+  right: 0;
+  text-align: center;
+  position: absolute;
+  background-color: white;
+  list-style: none;
+  width: 280px;
+  height: 100vh;
+  padding-top: 20px;
+  box-shadow: 0 0.1rem 1rem hsla(0deg, 0%, 0%, 0.2);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0;
+  color: #011627;
+}
+.header .menu .menu-responsive li {
+  margin: 20px;
+  cursor: pointer;
+}
+.header .menu .menu-responsive li a {
+  text-decoration: none;
+  color: #011627;
+}
+.header .menu .menu-responsive li .active {
+  transition: 0.3 ease border-bottom;
+}
+.header .menu .menu-responsive button {
+  padding: 12px 25px 12px 25px;
+  border-radius: 45px;
+  background-color: #E71D36;
+  color: white;
+  font-size: 18px;
+  margin-right: 0;
+}
+.header .menu .menu-responsive button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.header .menu-active {
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.323);
+}
 .header .content-header {
   width: 80%;
   display: flex;
   padding-top: 80px;
   align-items: flex-end;
   margin: 0 auto;
+  justify-content: space-between;
+}
+.header .content-header-text {
+  z-index: 10;
+  width: 60%;
 }
 .header .content-header-text h1 {
   width: 100%;
-  font-size: 60px;
-  line-height: 80px;
+  font-size: 40px;
+  line-height: 50px;
   margin-bottom: 40px;
+  margin-top: 50px;
   color: #011627;
 }
 .header .content-header-text h1 span {
@@ -100,6 +194,7 @@
 }
 .header .content-header-text-btn {
   display: flex;
+  padding-bottom: 30px;
 }
 .header .content-header-text-btn button {
   padding: 12px 25px 12px 25px;
@@ -108,7 +203,7 @@
   color: white;
   font-size: 18px;
   margin-right: 30px;
-  z-index: 1000;
+  z-index: 10;
 }
 .header .content-header-text-btn button:hover {
   opacity: 0.8;
@@ -117,7 +212,7 @@
 .header .content-header-text-btn .watch-video {
   display: flex;
   align-items: center;
-  z-index: 1000;
+  z-index: 10;
   justify-content: center;
   cursor: pointer;
 }
@@ -161,6 +256,55 @@
 .header .content-header-text-btn .watch-video:hover {
   opacity: 0.8;
 }
+@media only screen and (min-width: 1200px) {
+  .header .content-header-text h1 {
+    font-size: 80px;
+    line-height: 80px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .header .content-header-text h1 {
+    font-size: 30px !important;
+    line-height: 40px;
+    margin-bottom: 20px;
+  }
+  .header .content-header-text h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .header .content-header-text p {
+    font-size: 15px;
+  }
+}
 .header .content-header img {
   z-index: 10;
+}
+@media only screen and (max-width: 1200px) {
+  .header .content-header img {
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .header .content-header {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .header .content-header img {
+    width: 40%;
+  }
+  .header .content-header .content-header-text {
+    text-align: center;
+    width: 100%;
+  }
+  .header .content-header .content-header-text h1 {
+    font-size: 40px;
+  }
+  .header .content-header .content-header-text p {
+    margin-bottom: 30px;
+  }
+  .header .content-header .content-header-text-btn {
+    justify-content: center;
+  }
 }/*# sourceMappingURL=Header.css.map */
